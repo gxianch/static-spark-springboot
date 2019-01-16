@@ -14,8 +14,8 @@ object JedisConnectionPool {
   config.setMaxIdle(5)
   //当调用borrow object 方法时,是否进行有效性验证
   config.setTestOnBorrow(true)
-  val pool = new JedisPool(config, "10.10.1.63", 23308)
-//  val pool = new JedisPool(config, "111.23.6.233", 23308)
+//  val pool = new JedisPool(config, "10.10.1.63", 23308)
+ val pool = new JedisPool(config, "111.23.6.233", 23308)
 
   def getContion(): Jedis = {
     pool.getResource
